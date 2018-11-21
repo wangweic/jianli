@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="./css/a.css" />
+		<script src="//at.alicdn.com/t/font_819069_o1oc5267ho.js"></script>
+		<script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.11.0/dist/av-min.js"></script>
+		<title>王伟超的个人简历</title>
+		<style type="text/css">
+			.loding {
+				width: 200px;
+				height: 200px;
+				position: relative;
+			}
+			
+			.loding::before,
+			.loding::after {
+				content: '';
+				position: absolute;
+				width: 0;
+				height: 0;
+				background: black;
+				border-radius: 50%;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				margin: auto;
+				animation: s 1.5s linear infinite;
+			}
+			
+			.loding::after {
+				animation-delay: 0.75s;
+			}
+			
+			.site-loding {
+				position: fixed;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background: #888;
+				justify-content: center;
+				align-items: center;
+				z-index: 11;
+				display: flex;
+			}
+			
+			.site-loding .loding {
+				display: block;
+			}
+			
+			@keyframes s {
+				0% {
+					width: 0px;
+					height: 0px;
+					opacity: 1;
+				}
+				100% {
+					width: 100px;
+					height: 100px;
+					opacity: 0;
+				}
+			}
+			
+			.icon {
+				width: 1em;
+				height: 1em;
+				vertical-align: -0.15em;
+				fill: currentColor;
+				overflow: hidden;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--<div id="sitewelcome" class="site-loding">
+			<div id="siteloding" class="loding"></div>
+		</div>-->
+
+		<div id="setsticky" class="topNavBar">
+			<div class="topNavBar-inner clearfix">
+				<a class="logo" href="#" alt='logo'>
+					<span class="rs">RS</span><span class="card">card</span>
+				</a>
+				<nav class="clearfix menu">
+					<ul class="clearfix">
+						<li>
+							<a href="#about">关于</a>
+						</li>
+						<li>
+							<a href="#skill">技能</a>
+						</li>
+						<li class="tigger">
+							<a href="#works">作品</a>
+							<ul class="bottonNav">
+								<li>作品1</li>
+								<li>作品2</li>
+								<li>作品3</li>
+							</ul>
+						</li>
+						<li class="tigger">
+							<a href="#">博客</a>
+							<ul class="bottonNav">
+								<li>作品1</li>
+								<li>作品2</li>
+								<li>作品3</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">日历</a>
+						</li>
+						<li>
+							<a href="#">联系方式</a>
+						</li>
+						<li>
+							<a href="#">其它</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<div class="banner">
+			<div class="mark"></div>
+		</div>
+		<main class="main_s">
+			<div data-x id="about" class="userCard">
+				<div class="pictureAndText clearfix">
+					<div class="picture">
+						<img src="./img/startuper.jpg" width="299" height="347" alt="头像" />
+					</div>
+					<div class="text">
+						<span class="welcome">HELLO
+						<span class="trin"></span>
+						</span>
+						<h1>王伟超</h1>
+						<p>前端开发工程师</p>
+						<hr />
+						<dl>
+							<dt>年龄</dt>
+							<dd>26</dd>
+							<dt>所在城市</dt>
+							<dd>北京</dd>
+							<dt>邮箱</dt>
+							<dd>weichao447154678@163.com</dd>
+							<dt>手机</dt>
+							<dd>18911082723</dd>
+						</dl>
+					</div>
+				</div>
+				<footer class="media">
+					<a href="#">
+						<svg class="icon" aria-hidden="true">
+							<use xlink:href="#icon-github"></use>
+						</svg>
+					</a>
+					<a href="#">
+						<svg class="icon" aria-hidden="true">
+							<use xlink:href="#icon-twitter"></use>
+						</svg>
+					</a>
+					<a href="#">
+						<svg class="icon" aria-hidden="true">
+							<use xlink:href="#icon-weibo"></use>
+						</svg>
+					</a>
+				</footer>
+			</div>
+			<p class="downprent">
+				<a class="downloads" href="hah.pdf" target="_blank" download>下载 PDF 简历</a>
+				<p class="info">王伟超，前端工程师，PHP工程师，现 易代买 任职前端工程师。
+					<br> 技能：前端开发、PHP开发、小程序开发。
+				</p>
+			</p>
+		</main>
+		<section data-x id="skill" class="skills">
+			<h2>技能</h2>
+			<ol class="clearfix">
+				<li>
+					<h3>HTML 5&amp; CSS 3</h3>
+					<div class="proBar">
+						<div class="pro"></div>
+					</div>
+				</li>
+				<li>
+					<h3>JavaScript</h3>
+					<div class="proBar">
+						<div class="pro"></div>
+					</div>
+				</li>
+				<li>
+					<h3>jQuery</h3>
+					<div class="proBar">
+						<div class="pro"></div>
+					</div>
+				</li>
+				<li>
+					<h3>Vue</h3>
+					<div class="proBar">
+						<div class="pro"></div>
+					</div>
+				</li>
+				<li>
+					<h3>React</h3>
+					<div class="proBar">
+						<div class="pro"></div>
+					</div>
+				</li>
+				<li>
+					<h3>HTTP</h3>
+					<div class="proBar">
+						<div class="pro"></div>
+					</div>
+				</li>
+			</ol>
+		</section>
+		<section data-x id="works" class="portfolio">
+			<h2>作品集</h2>
+			<nav>
+				<ol class="clearfix">
+					<li id="portfolio1">所有</li>
+					<li id="portfolio2">框架</li>
+					<li id="portfolio3">原生JS&amp;CSS</li>
+				</ol>
+				<div id="bar" class="bar status-1">
+					<div class="bar_inner"></div>
+				</div>
+			</nav>
+			<div class="works" style="height: 576px;">
+				<div class="big" style="top:0;left:0;"><img src="./img/img1.jpg" alt="作品1" /></div>
+				<div class="small" style="top:0;left:645px;"><img src="./img/img2.jpg" alt="作品2" /></div>
+				<div class="small" style="top:298px;left:645px;"><img src="./img/img3.jpg" alt="作品3" /></div>
+			</div>
+		</section>
+
+		<section class="portfolio" id="liuyan" style="margin-top: 40px;margin-bottom: 40px;">
+			<h2>留言板</h2>
+			<ol class="messgae-list">
+				<li style="background: #666;color: #fff;border-radius: 5px;">
+					<span>留言内容</span>
+					<span>用户昵称</span>
+					<span>留言时间</span>
+				</li>
+			</ol>
+			<form action="" id="messageForm" method="post" class="clearfix" style="margin-top: 40px;">
+				<textarea name="content" placeholder="请输入留言内容" id="textarea" rows="" cols="" style="width: 400px;height: 100px;float: left; border-radius: 10px; margin-right: 40px;"></textarea>
+				<input type="text" id="user" value="" placeholder="请输入昵称" style="float: left; margin-top: 35px; margin-left: 5px; height: 30px; border-radius: 5px; border: 1px solid #888;margin-right: 40px;" />
+				<input type="submit" value="提交" style="border: none;background: #f08200;padding: 20px 40px;color: #fff;border-radius: 10px;float: left;margin-left: 20px;margin-top: 50px;" />
+			</form>
+		</section>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/16.3.5/Tween.min.js"></script>
+		<script src="message.js"></script>
+
+		<script>
+			portfolio1.onclick = function() {
+				bar.className = 'bar status-1';
+			}
+			portfolio2.onclick = function() {
+				bar.className = 'bar status-2';
+			}
+			portfolio3.onclick = function() {
+				bar.className = 'bar status-3';
+			}
+			//加载动画
+			//			setTimeout(function() {
+			//				sitewelcome.classList.remove('site-loding')
+			//				siteloding.classList.remove('loding')
+			//			}, 1000)
+
+			setTimeout(() => {
+				findClos()
+			}, 300)
+
+			let specialTages = document.querySelectorAll('[data-x]');
+
+			for(let i = 0; i < specialTages.length; i++) {
+				specialTages[i].classList.add('offset');
+			}
+			//滑动顶部变色
+			window.onscroll = function() {
+				if(window.scrollY > 0) {
+					setsticky.classList.add('sticky');
+				} else {
+					setsticky.classList.remove('sticky');
+				}
+				findClos();
+			}
+
+			function findClos() {
+				let specialTages = document.querySelectorAll('[data-x]');
+
+				let minIndex = 0;
+				for(let i = 1; i < specialTages.length; i++) {
+					if(Math.abs(specialTages[i].offsetTop - window.scrollY) < Math.abs(specialTages[minIndex].offsetTop - window.scrollY)) {
+						minIndex = i;
+					}
+				}
+				specialTages[minIndex].classList.remove('offset');
+
+				let id = specialTages[minIndex].id;
+				let a = document.querySelector('a[href="#' + id + '"]');
+
+				let li = a.parentNode;
+
+				let broa = li.parentNode.children;
+
+				for(let i = 0; i < broa.length; i++) {
+					broa[i].classList.remove('heightliang');
+				}
+				li.classList.add('heightliang');
+			}
+			//移入显示
+			let atages = document.querySelectorAll('nav.menu > ul > li');
+
+			for(let i = 0; i < atages.length; i++) {
+				atages[i].onmouseenter = function(x) {
+					x.currentTarget.classList.add('active');
+				}
+				atages[i].onmouseleave = function(x) {
+					x.currentTarget.classList.remove('active');
+				}
+
+			}
+
+			//点击显示
+			let atage = document.querySelectorAll('nav.menu > ul > li > a');
+
+			function animate(time) {
+				requestAnimationFrame(animate);
+				TWEEN.update(time);
+			}
+			requestAnimationFrame(animate);
+
+			for(let i = 0; i < atages.length; i++) {
+				atage[i].onclick = function(x) {
+					x.preventDefault(); //阻止默认动作
+					let a = x.currentTarget;
+					let hrefs = a.getAttribute('href');
+					let elements = document.querySelector(hrefs);
+					let top = elements.offsetTop;
+
+					let currentTop = window.scrollY; //获取窗口滚动的高度
+					let targetTop = top - 80;
+
+					let s = targetTop - currentTop;
+					var coords = {
+						y: currentTop
+					};
+					var t = Math.abs((s / 100) * 300);
+
+					if(t > 500) {
+						t = 500;
+					}
+					var tween = new TWEEN.Tween(coords)
+						.to({
+							y: targetTop
+						}, t)
+						//如果需要修改动画，只需要修改 Quadratic  即可
+						.easing(TWEEN.Easing.Quadratic.InOut)
+						.onUpdate(function() {
+							window.scrollTo(0, coords.y);
+						})
+						.start();
+				}
+			}
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,1506 @@
+@charset "utf-8";
+* {
+	margin: 0;
+	padding: 0;
+}
+
+
+/*将所有HTML元素的默认边距清0*/
+
+html,
+body {
+	font-size: 1rem;
+	font-family: "微软雅黑", "simsun", "arial";
+	color: #333;
+	background: #efeff4;
+}
+
+
+/*对HTML元素中的字体、颜色、背景色进行初始设置*/
+
+ul li,
+ol li {
+	list-style: none;
+}
+
+
+/*将列表标签的默认样式清除*/
+
+a {
+	text-decoration: none;
+	outline: none;
+	blr: expression(this.onFocus=this.blur());
+}
+
+
+/*将超链接的下划线去掉以及在ie6中点击出现的虚线框去掉*/
+
+img {
+	border: none;
+}
+
+
+/*图片的默认边框去掉 */
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+caption,
+th,
+td {
+	font-weight: normal;
+	text-align: center;
+}
+
+input,
+textarea,
+select,
+button {
+	font-size: 100%;
+	font-family: inherit;
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+
+label,
+button {
+	cursor: pointer
+}
+
+textarea {
+	white-space: pre;
+	resize: none;
+	border: 1px solid #eee;
+}
+
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+	display: block;
+}
+
+
+/*清楚浮动*/
+
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+	height: 0;
+	line-height: 0;
+	visibility: hidden;
+}
+
+.clearfix {
+	zoom: 1;
+}
+
+
+/*解决ie6的兼容性问题*/
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+
+/*boxsizing*/
+
+.boxSizing {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+	-webkit-appearance: none;
+}
+
+textarea {
+	-webkit-appearance: none;
+}
+
+input,
+input:focus,
+input:active {
+	user-select: text;
+}
+
+
+/*index首页*/
+
+header.lottery {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 4rem;
+	line-height: 4rem;
+	background-color: #e9454f;
+}
+
+header.lottery h1 {
+	text-align: center;
+	color: #fff;
+	font-weight: normal;
+	font-size: 1.4rem;
+}
+
+header.lottery a.left {
+	position: absolute;
+	top: 0.5rem;
+	left: 1rem;
+}
+
+header.lottery a.left img {
+	width: 2rem;
+}
+
+header.lottery a.right {
+	position: absolute;
+	top: 0.5rem;
+	right: 1rem;
+}
+
+header.lottery a.right img {
+	width: 2rem;
+}
+
+div.index {
+	margin-top: 4rem;
+}
+
+div.index a {
+	display: block;
+	margin-bottom: 0.5rem;
+}
+
+div.index a img {
+	width: 100%;
+}
+
+footer.lottery {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	padding: 0.5rem 0;
+	width: 100%;
+	background-color: #fff;
+}
+
+footer.lottery a {
+	float: left;
+	width: 25%;
+	text-align: center;
+	color: #999;
+	font-size: 1.2rem;
+}
+
+footer.lottery a img {
+	display: block;
+	margin: 0 auto;
+	width: 3rem;
+	height: 3rem;
+}
+
+footer.lottery a.on {
+	color: #e9454f;
+}
+
+
+/*login_quick快捷登录*/
+
+form.login {
+	margin-top: 4rem;
+}
+
+form.login p.one {
+	height: 4rem;
+	line-height: 4rem;
+	background-color: #fff;
+}
+
+form.login p.one a {
+	float: left;
+	width: 50%;
+	text-align: center;
+	font-size: 1.4rem;
+	color: #999;
+	border-bottom: 2px solid #ccc;
+}
+
+form.login p.one a.on {
+	color: #E9454F;
+	border-bottom: 2px solid #E9454F;
+}
+
+form.login p.two {
+	padding: 0 1rem;
+	height: 4.5rem;
+	line-height: 4.5rem;
+	font-size: 1.3rem;
+	border-bottom: 1px solid #ccc;
+	background-color: #fff;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+form.login p.two label {
+	float: left;
+	width: 20%;
+	box-sizing: border-box;
+}
+
+form.login p.two input {
+	float: left;
+	width: 80%;
+	height: 4.5rem;
+	line-height: 4.5rem;
+	border: none;
+}
+
+form.login p.two a {
+	float: right;
+	margin-top: 0.5rem;
+	width: 30%;
+	text-align: center;
+	border: 1px solid #999;
+	height: 3.5rem;
+	line-height: 3.5rem;
+	color: #999;
+	border-radius: 1.7rem;
+	box-sizing: border-box;
+}
+
+form.login p.three {
+	padding: 1rem;
+}
+
+form.login p.three input {
+	display: block;
+	width: 100%;
+	text-align: center;
+	height: 4.5rem;
+	line-height: 4.5rem;
+	font-size: 1.6rem;
+	color: #fff;
+	border: none;
+	border-radius: 2.7rem;
+	background-color: #E9454F;
+}
+
+form.login p.four {
+	padding: 1rem;
+	text-align: right;
+}
+
+form.login p.four a {
+	font-size: 1.4rem;
+	color: #E9454F;
+}
+
+form.login div {
+	/*position: fixed;
+	left: 0;
+	bottom: 0;*/
+	margin-top: 4rem;
+	padding: 0 3rem;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+form.login div p:nth-child(1) {
+	margin-bottom: 1rem;
+	text-align: center;
+	height: 3rem;
+	line-height: 3rem;
+}
+
+form.login div p:nth-child(1) span {
+	float: left;
+	margin-top: 1.5rem;
+	width: 30%;
+	border-bottom: 1px solid #ccc;
+}
+
+form.login div p strong {
+	float: left;
+	width: 40%;
+	text-align: center;
+	font-size: 1.5rem;
+	font-weight: normal;
+	color: #999;
+}
+
+form.login div p a {
+	float: left;
+	width: 50%;
+	text-align: center;
+}
+
+form.login div p a img {
+	display: block;
+	margin: 0 auto;
+	width: 7rem;
+}
+
+form.login div p a span {
+	line-height: 3rem;
+	font-size: 1.3rem;
+	color: #999;
+}
+
+
+/*lottery开奖*/
+
+div.lottery {
+	padding: 1rem 0.5rem;
+	margin-top: 4rem;
+	margin-bottom: 4.5rem;
+}
+
+div.lottery a {
+	margin-bottom: 0.5rem;
+	display: block;
+	padding: 1rem 0.5rem;
+	border-radius: 0.5rem;
+	background-color: #fff;
+}
+
+div.lottery a img {
+	float: left;
+	width: 6rem;
+}
+
+div.lottery a div {
+	float: right;
+}
+
+div.lottery a div p:nth-child(1) {
+	height: 3rem;
+	line-height: 3rem;
+	font-size: 1.2rem;
+	color: #999;
+}
+
+div.lottery a div p:nth-child(1) span:nth-child(1) {
+	font-size: 1.6rem;
+	color: #333;
+}
+
+div.lottery a div p:nth-child(2) {
+	height: 3rem;
+	line-height: 3rem;
+}
+
+div.lottery a div p:nth-child(2) span {
+	float: left;
+	margin-right: 0.8rem;
+	width: 3rem;
+	height: 3rem;
+	text-align: center;
+	line-height: 3rem;
+	color: #fff;
+	border: 1px solid #E9454F;
+	border-radius: 100%;
+	font-size: 1.4rem;
+	background-color: #E9454F;
+}
+
+div.lottery a div p:nth-child(2) span.one {
+	border: 1px solid #45ACF8;
+	background-color: #45acf8;
+}
+
+
+/*information资讯*/
+
+div.information {
+	margin-top: 4rem;
+	margin-bottom: 4.5rem;
+	background-color: #fff;
+}
+
+div.information a {
+	display: block;
+	padding: 0 1rem;
+	height: 5rem;
+	line-height: 5rem;
+	color: #333;
+	font-size: 1.3rem;
+	border-bottom: 1px solid #eee;
+}
+
+div.information a span {
+	float: left;
+	width: 68%;
+}
+
+div.information a span:nth-child(2) {
+	color: #999;
+	width: 25%;
+}
+
+div.information a img {
+	margin-top: 1.7rem;
+	float: right;
+	width: 1.5rem;
+}
+
+
+/*mine我的*/
+
+div.mine div.top {
+	padding: 0 1rem;
+	padding-top: 6rem;
+	background-color: #E9454F;
+}
+
+div.mine div.top img {
+	display: block;
+	margin: 0 auto;
+	width: 10rem;
+	height: 10rem;
+	border: 0.8rem solid #f28f95;
+	border-radius: 100%;
+}
+
+div.mine div.top p {
+	text-align: center;
+	color: #fff;
+}
+
+div.mine div.top p:nth-of-type(2) a {
+	line-height: 3rem;
+	color: #fff;
+	font-size: 1.3rem;
+}
+
+div.mine div.top p:nth-of-type(3) {
+	font-size: 1.6rem;
+}
+
+div.mine div.top p:nth-of-type(3) a {
+	color: #fff;
+}
+
+div.mine div.top p:nth-of-type(4) {
+	margin-top: 1rem;
+	height: 5rem;
+	line-height: 5rem;
+	border-top: 1px solid #f4a2a7;
+}
+
+div.mine div.top p:nth-of-type(4) a {
+	float: left;
+	width: 50%;
+	text-align: center;
+	font-size: 1.6rem;
+	color: #fff;
+}
+
+div.mine div.top p:nth-of-type(4) a:nth-child(1) {
+	border-right: 1px solid #f4a2a7;
+	box-sizing: border-box;
+}
+
+div.mine div.nav {
+	margin-top: 0.5rem;
+	display: flex;
+	height: 4rem;
+	line-height: 4rem;
+	background-color: #fff;
+}
+
+div.mine div.nav a {
+	flex: 1;
+	text-align: center;
+	font-size: 1.4rem;
+	color: #333;
+}
+
+div.mine div.nav a.on {
+	color: #E9454F;
+	border-bottom: 1px solid #E9454F;
+}
+
+div.mine div.conbox {
+	margin-bottom: 6rem;
+}
+
+div.mine div.conbox div.con div.list {
+	margin-top: 0.5rem;
+}
+
+div.mine div.conbox div.con div.list p {
+	padding: 1rem 0;
+	height: 2rem;
+	line-height: 2rem;
+	font-size: 1.4rem;
+	background-color: #fff;
+	border-bottom: 1px solid #eee;
+}
+
+div.mine div.conbox div.con div.list p span:nth-child(1) {
+	padding-left: 1rem;
+	float: left;
+	border-left: 5px solid #E9454F;
+}
+
+div.mine div.conbox div.con div.list p span:nth-child(2) {
+	float: right;
+	margin-right: 1rem;
+	color: #E9454F;
+}
+
+div.mine div.conbox div.con div.list a {
+	padding: 0 1rem;
+	display: block;
+	height: 4rem;
+	line-height: 4rem;
+	color: #333;
+	font-size: 1.4rem;
+	background-color: #fff;
+}
+
+div.mine div.conbox div.con div.list a span:nth-child(1) {
+	float: left;
+}
+
+div.mine div.conbox div.con div.list a span:nth-child(2) {
+	float: right;
+	color: #999;
+}
+
+div.mine div.conbox div.con div.list a span:nth-child(2) img {
+	width: 1.6rem;
+	vertical-align: middle;
+}
+
+
+/*lotto大乐透*/
+
+section.lotto {
+	margin-top: 4rem;
+	margin-bottom: 6rem;
+	font-size: 1.3rem;
+}
+
+section.lotto p.one {
+	text-align: center;
+	height: 3rem;
+	line-height: 3rem;
+	color: #666;
+	border-bottom: 1px solid #eee;
+}
+
+section.lotto p.one span {
+	margin-right: 0.5rem;
+}
+
+section.lotto p.one strong {
+	color: #E9454F;
+	font-weight: normal;
+}
+
+section.lotto p.two {
+	padding: 1rem;
+	height: 4rem;
+	line-height: 4rem;
+	color: #666;
+}
+
+section.lotto p.two span {
+	float: left;
+	font-size: 1.5rem;
+}
+
+section.lotto p.two span strong {
+	color: #E9454F;
+	font-weight: normal;
+}
+
+section.lotto p.two a {
+	float: right;
+	width: 10rem;
+	text-align: center;
+	border-radius: 0.5rem;
+	color: #fff;
+	font-size: 1.6rem;
+	background-color: #E9454F;
+}
+
+section.lotto p.three {
+	padding: 1rem;
+	padding-top: 0;
+	height: 3rem;
+	line-height: 3rem;
+	border-bottom: 1px solid #eee;
+}
+
+section.lotto p.three span {
+	float: left;
+	height: 3rem;
+	color: #666;
+}
+
+section.lotto p.three span strong {
+	float: left;
+	margin-left: 0.3rem;
+	width: 3rem;
+	height: 3rem;
+	text-align: center;
+	line-height: 3rem;
+	color: #fff;
+	font-size: 1.5rem;
+	font-weight: normal;
+	border-radius: 100%;
+	background-color: #E9454F;
+}
+
+section.lotto p.three span strong.one {
+	background-color: #45ACF8;
+}
+
+section.lotto p.three a {
+	float: right;
+}
+
+section.lotto p.three a img {
+	display: block;
+	width: 3rem;
+}
+
+section.lotto div.choose {
+	padding-bottom: 1rem;
+	border-bottom: 1px solid #eee;
+}
+
+section.lotto div.choose p {
+	margin-top: 1rem;
+	height: 3.7rem;
+	line-height: 3.7rem;
+	overflow: hidden;
+}
+
+section.lotto div.choose p span {
+	float: left;
+	margin-left: 0.7rem;
+	width: 3.7rem;
+	text-align: center;
+	line-height: 3.5rem;
+	color: #E9454F;
+	font-size: 1.8rem;
+	border: 1px solid #E9454F;
+	border-radius: 100%;
+	box-sizing: border-box;
+}
+
+section.lotto div.choose p span.on {
+	color: #fff;
+	background-color: #E9454F;
+}
+
+section.lotto div.choose1 {
+	border-bottom: none;
+}
+
+section.lotto div.choose1 p span {
+	color: #45ACF8;
+	border: 1px solid #45ACF8;
+}
+
+section.lotto div.choose1 p span.on {
+	color: #fff;
+	background-color: #45ACF8;
+}
+
+div.foot {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	padding: 1rem;
+	height: 5.5rem;
+	line-height: 5.5rem;
+	border-top: 1px solid #eee;
+	background-color: #fff;
+	box-sizing: border-box;
+}
+
+div.foot a:nth-child(1) {
+	float: left;
+	width: 8rem;
+	height: 3.5rem;
+	line-height: 3.5rem;
+	text-align: center;
+	color: #E9454F;
+	font-size: 1.6rem;
+	border: 1px solid #E9454F;
+	border-radius: 0.5rem;
+}
+
+div.foot a:nth-child(2) {
+	float: right;
+	width: 8rem;
+	height: 3.5rem;
+	line-height: 3.5rem;
+	text-align: center;
+	color: #fff;
+	font-size: 1.6rem;
+	border: 1px solid #E9454F;
+	border-radius: 0.5rem;
+	background-color: #E9454F;
+}
+
+
+/*infodetail资讯详情*/
+
+div.infodetail {
+	padding: 1rem;
+	margin-top: 4rem;
+}
+
+div.infodetail img {
+	width: 100%;
+	display: block;
+	margin: 0.5rem 0;
+}
+
+div.infodetail h4 {
+	text-align: center;
+	line-height: 4rem;
+	font-size: 1.8rem;
+}
+
+div.infodetail p:nth-of-type(1) {
+	text-align: center;
+	font-size: 1.3rem;
+	color: #999;
+	text-indent: 0;
+}
+
+div.infodetail p {
+	line-height: 2.6rem;
+	font-size: 1.3rem;
+	text-indent: 3rem;
+}
+
+
+/*lottotimes大乐透期次*/
+
+div.lottery1 {
+	padding: 0;
+}
+
+div.lottery1 a {
+	margin-bottom: 0;
+	border-bottom: 1px solid #eee;
+}
+
+div.lottery1 a img {
+	float: right;
+	margin-top: 2rem;
+	width: 2rem;
+}
+
+div.lottery1 a div.box1 p:nth-child(2) span {
+	color: #E9454F;
+	border: 1px solid #E9454F;
+	background-color: #fff;
+}
+
+div.lottery a div.box1 p:nth-child(2) span.one {
+	color: #45ACF8;
+	border: 1px solid #45ACF8;
+}
+
+
+/*lottobet大乐透投注*/
+
+section.lottobet {
+	margin-top: 4rem;
+	padding: 1rem;
+}
+
+section.lottobet p.one {
+	height: 3rem;
+	line-height: 3rem;
+}
+
+section.lottobet p.one a {
+	float: left;
+	width: 30%;
+	text-align: center;
+	color: #E9454F;
+	font-size: 1.6rem;
+	border: 1px solid #E9454F;
+	border-radius: 0.5rem;
+	box-sizing: border-box;
+}
+
+section.lottobet p.one a:nth-child(2) {
+	margin: 0 5%;
+}
+
+section.lottobet div.lists {
+	margin-top: 1rem;
+	margin-bottom: 5rem;
+}
+
+section.lottobet div.lists p.line {
+	border: 3px solid #999;
+	border-radius: 3px;
+	background-color: #999;
+}
+
+section.lottobet div.lists div.box {
+	margin: 0 auto;
+	margin-top: -2px;
+	width: 96%;
+	border: 1px solid #ccc;
+	background-color: #fff;
+}
+
+section.lottobet div.lists div.box div.list {
+	padding: 1rem;
+	border-bottom: 1px dashed #ccc;
+}
+
+section.lottobet div.lists div.box div.list:last-child {
+	border-bottom: none;
+}
+
+section.lottobet div.lists div.box div.list img:nth-of-type(1) {
+	float: left;
+	margin-top: 1rem;
+	margin-right: 1rem;
+	width: 2rem;
+}
+
+section.lottobet div.lists div.box div.list img:nth-of-type(2) {
+	float: right;
+	margin-top: 1rem;
+	width: 2rem;
+}
+
+section.lottobet div.lists div.box div.list div {
+	float: left;
+}
+
+section.lottobet div.lists div.box div.list div p {
+	line-height: 2rem;
+	font-size: 1.3rem;
+	color: #999;
+}
+
+section.lottobet div.lists div.box div.list div p:nth-child(1) span {
+	color: #E9454F;
+	margin-right: 0.5rem;
+}
+
+section.lottobet div.lists div.box div.list div p:nth-child(1) span.one {
+	color: #45ACF8;
+}
+
+div.foot span {
+	float: left;
+	width: 70%;
+	height: 3.5rem;
+	line-height: 3.5rem;
+	text-align: right;
+	font-size: 1.5rem;
+	color: #999;
+}
+
+div.foot span strong {
+	margin-right: 1rem;
+	font-weight: normal;
+	color: #E9454F;
+}
+
+
+/*pay支付*/
+
+section.paybox {
+	margin-top: 4rem;
+	padding: 1rem 2rem;
+}
+
+section.paybox div.top p {
+	text-align: center;
+	font-size: 1.4rem;
+}
+
+section.paybox div.top p:nth-child(1) {
+	margin-top: 3rem;
+}
+
+section.paybox div.top p:nth-child(2) {
+	font-size: 3rem;
+}
+
+section.paybox div.top p:nth-child(3) {
+	margin-top: 2rem;
+	color: #999;
+}
+
+section.paybox form {
+	margin-top: 3rem;
+}
+
+section.paybox form>p {
+	line-height: 4rem;
+	font-size: 1.6rem;
+	color: #999;
+	border-bottom: 1px solid #eee;
+}
+
+section.paybox form ul li {
+	height: 5rem;
+	line-height: 5rem;
+	border-bottom: 1px solid #eee;
+}
+
+section.paybox form ul li img {
+	margin-top: 1rem;
+	float: left;
+	width: 3rem;
+}
+
+section.paybox form ul li>span {
+	margin-left: 1rem;
+	float: left;
+	font-size: 1.6rem;
+}
+
+section.paybox form ul li label {
+	float: right;
+	margin-top: 1.5rem;
+	position: relative;
+	width: 2rem;
+	height: 2rem;
+}
+
+section.paybox form ul li label input {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 2rem;
+	height: 2rem;
+	z-index: 10;
+	opacity: 0;
+}
+
+section.paybox form ul li label span {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 2rem;
+	height: 2rem;
+	background: url(../img/pay4.png) no-repeat;
+	background-size: 2rem 2rem;
+}
+
+section.paybox form ul li label input:checked+span {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 2rem;
+	height: 2rem;
+	background: url(../img/pay5.png) no-repeat;
+	background-size: 2rem 2rem;
+}
+
+section.paybox form p input[type=submit] {
+	margin-top: 2rem;
+	display: block;
+	width: 100%;
+	height: 4rem;
+	text-align: center;
+	line-height: 4rem;
+	font-size: 1.6rem;
+	color: #fff;
+	border: none;
+	border-radius: 2rem;
+	background-color: #E9454F;
+}
+
+
+/*personal个人信息*/
+
+ul.personal {
+	margin-top: 4rem;
+	background-color: #fff;
+}
+
+ul.personal li {
+	padding: 0 1rem;
+	height: 5rem;
+	line-height: 5rem;
+	font-size: 1.4rem;
+	border-bottom: 1px solid #eee;
+}
+
+ul.personal li span:nth-child(1) {
+	float: left;
+}
+
+ul.personal li span:nth-child(2) {
+	float: right;
+}
+
+ul.personal li:nth-child(1) span img:nth-child(1) {
+	float: left;
+	margin-top: 1rem;
+	width: 3rem;
+	height: 3rem;
+	border: 1px solid #eee;
+}
+
+ul.personal li:nth-child(1) span img:nth-child(2) {
+	margin-top: 1.5rem;
+	float: left;
+	width: 2rem;
+}
+
+ul.personal li:nth-child(2) span strong {
+	float: left;
+	font-weight: normal;
+	color: #999;
+}
+
+ul.personal li:nth-child(2) span img {
+	float: left;
+	margin-top: 1.5rem;
+	width: 2rem;
+}
+
+div.cover {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+div.cover form {
+	position: absolute;
+	top: 30%;
+	left: 10%;
+	width: 80%;
+	border-radius: 1rem;
+	background-color: #fff;
+	box-sizing: border-box;
+}
+
+div.cover form p:nth-child(1) {
+	margin-top: 1rem;
+	text-align: center;
+	line-height: 3rem;
+	font-size: 1.6rem;
+}
+
+div.cover form p:nth-child(2) {
+	padding: 0 1rem;
+}
+
+div.cover form p:nth-child(2) input {
+	display: block;
+	margin-top: 1rem;
+	width: 100%;
+	height: 3rem;
+	border: 1px solid #ccc;
+}
+
+div.cover form p:nth-child(3) {
+	margin-top: 2rem;
+	height: 4rem;
+	line-height: 4rem;
+	border-top: 1px solid #ccc;
+}
+
+div.cover form p:nth-child(3) input {
+	float: left;
+	width: 50%;
+	height: 4rem;
+	border: none;
+	font-size: 1.5rem;
+}
+
+div.cover form p:nth-child(3) input[type=button] {
+	color: #999;
+	border-bottom-left-radius: 1rem;
+	background-color: #fff;
+}
+
+div.cover form p:nth-child(3) input[type=submit] {
+	color: #fff;
+	border-bottom-right-radius: 1rem;
+	background-color: #E9454F;
+}
+
+
+/*doutimesdetail期次详情*/
+
+section.times {
+	margin-top: 4rem;
+}
+
+section.times div.top {
+	padding: 2rem 0;
+	background-color: #fff;
+}
+
+section.times div.top p {
+	text-align: center;
+	line-height: 3rem;
+	font-size: 1.4rem;
+	color: #999;
+}
+
+section.times div.top p:nth-child(1) span:nth-child(1) {
+	margin-right: 1rem;
+	color: #333;
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+section.times div.top p:nth-child(2) {
+	margin-top: 1rem;
+}
+
+section.times div.top p:nth-child(2) span {
+	display: inline-block;
+	width: 3rem;
+	height: 3rem;
+	text-align: center;
+	line-height: 3rem;
+	font-size: 1.8rem;
+	color: #fff;
+	border-radius: 100%;
+	background-color: #E9454F;
+}
+
+section.times div.top p:nth-child(2) span.one {
+	background-color: #45ACF8;
+}
+
+section.times div.mid {
+	margin-top: 1px;
+	padding: 1rem;
+	background-color: #fff;
+}
+
+section.times div.mid p {
+	float: left;
+	width: 50%;
+	text-align: center;
+	font-size: 1.4rem;
+}
+
+section.times div.mid p:nth-child(1) {
+	border-right: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+section.times div.mid p span {
+	display: block;
+	line-height: 2rem;
+	color: #999;
+}
+
+section.times div.mid p span:nth-child(2) {
+	font-size: 1.6rem;
+	color: #E9454F;
+}
+
+section.times table {
+	margin-top: 0.5rem;
+	width: 100%;
+	background-color: #fff;
+}
+
+section.times table tr {
+	display: flex;
+}
+
+section.times table tr td {
+	flex: 1;
+	text-align: center;
+	height: 4rem;
+	line-height: 4rem;
+	font-size: 1.5rem;
+	border-right: 1px solid #efeff6;
+	border-bottom: 1px solid #efeff6;
+}
+
+section.times table tr td:last-child {
+	color: #E9454F;
+	border-right: none;
+}
+
+section.times table tr:nth-child(1) td {
+	color: #999;
+}
+
+
+/*recharge充值*/
+
+section.recharge {
+	padding: 0;
+}
+
+section.recharge form>p {
+	padding: 0 1rem;
+}
+
+section.recharge form ul {
+	background-color: #fff;
+}
+
+section.recharge form ul li {
+	padding: 0 1rem;
+}
+
+section.recharge form div.money {
+	padding: 1rem 0;
+	background-color: #fff;
+}
+
+section.recharge form div.money p {
+	height: 4rem;
+	line-height: 4rem;
+}
+
+section.recharge form div.money p:nth-child(1) {
+	margin-bottom: 1rem;
+}
+
+section.recharge form div.money p span {
+	float: left;
+	margin-left: 2.5%;
+	width: 30%;
+	text-align: center;
+	height: 4rem;
+	font-size: 1.4rem;
+	border: 1px solid #ccc;
+	border-radius: 0.5rem;
+	box-sizing: border-box;
+}
+
+section.recharge form div.money p span.on {
+	color: #fff;
+	border: 1px solid #E9454F;
+	background-color: #E9454F;
+}
+
+section.recharge form div.money p input {
+	float: left;
+	margin-left: 2.5%;
+	width: 30%;
+	text-align: center;
+	height: 4rem;
+	font-size: 1.4rem;
+	border: 1px solid #ccc;
+	border-radius: 0.5rem;
+	box-sizing: border-box;
+}
+
+section.recharge form div.infor {
+	padding: 1rem;
+	background-color: #fff;
+}
+
+section.recharge form div.infor p:nth-child(1) {
+	font-size: 1.8rem;
+}
+
+section.recharge form div.infor p:nth-child(2) {
+	margin-top: 0.5rem;
+	font-size: 1.4rem;
+	color: #999;
+}
+
+
+/*PayDatail待付款详情*/
+
+section.info {
+	background: #fff;
+	margin-top: 4rem;
+	margin-bottom: 5rem;
+}
+
+section.info p {
+	font-size: 1rem;
+	padding: 0rem 1rem;
+	height: 3.5rem;
+	line-height: 3.5rem;
+	font-size: 1.2rem;
+}
+
+section.info p strong {
+	color: #333333;
+	font-size: 1.4rem;
+}
+
+section.info p span {
+	font-weight: normal;
+	color: #333333;
+}
+
+section.info p span:nth-child(1) {
+	float: left;
+}
+
+section.info p span:nth-child(2) {
+	float: right;
+}
+
+section.info p:nth-child(1) span:nth-child(2) {
+	color: #666;
+}
+
+section.info p:nth-child(4) {
+	height: 4rem;
+	line-height: 4rem;
+	border-bottom: 4px solid #efeff4;
+	border-top: 4px solid #efeff4;
+}
+
+section.info p:nth-child(4) span:nth-child(2) {
+	color: red;
+}
+
+section.info div.code_info {
+	box-sizing: border-box;
+}
+
+section.info div.code_info p.uploads {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	height: auto;
+	padding-top: 1rem;
+}
+
+section.info p:nth-child(7) {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	height: auto;
+	display: block;
+	border-top: 1px solid #efeff4;
+	padding-top: 1rem;
+}
+
+section.info div.code_info p.uploads img {
+	width: 5rem;
+	height: 5rem;
+	float: left;
+	margin-bottom: 0.5rem;
+	margin-left: 0.8rem;
+}
+
+section.info p:last-child {
+	border-bottom: 4px solid #efeff4;
+	border-top: 4px solid #efeff4;
+	height: 4rem;
+	line-height: 4rem;
+}
+
+footer div {
+	box-sizing: border-box;
+	position: fixed;
+	bottom: 0;
+	background: #fff;
+	width: 100%;
+	height: 5rem;
+	line-height: 5rem;
+	padding: 0rem 1rem;
+}
+
+footer div button {
+	width: 7rem;
+	border: 1px solid #e9454f;
+	height: 3rem;
+	border-radius: 0.5rem;
+	line-height: 3rem;
+	margin-top: 1rem;
+	font-size: 1.4rem;
+}
+
+footer div button:nth-child(1) {
+	color: #e9454f;
+	background: #fff;
+	float: left;
+}
+
+footer div button:nth-child(2) {
+	color: #fff;
+	background: #e9454f;
+	float: right;
+}
+
+
+/*AccDetails账户明细*/
+
+section.lists {
+	box-sizing: border-box;
+	background: #fff;
+	margin-top: 3.5rem;
+	border-top: 1rem solid #eee;
+	border-bottom: 3rem solid #eee;
+}
+
+section.lists div {
+	padding: 1rem;
+	height: 4rem;
+	line-height: 4rem;
+	border-bottom: 1px solid #eee;
+	
+}
+
+section.lists div ul li p.infos span {
+	display: block;
+	line-height: 2rem;
+}
+
+section.lists div ul li p.infos span:nth-child(1) {
+	font-size: 1.6rem;
+	font-weight: 500;
+}
+
+section.lists div ul li p.infos span:nth-child(2) {
+	color: #999;
+	font-size: 1.3rem;
+}
+
+section.lists div ul li p.infofr {
+	line-height: 4rem;
+}
+
+section.lists div ul li p.infofr span.adds {
+	color: red;
+	font-size: 1.6rem;
+}
+section.lists div ul li p.infofr span.reduce {
+	color: #92d75c;
+	font-size: 1.6rem;
+}
